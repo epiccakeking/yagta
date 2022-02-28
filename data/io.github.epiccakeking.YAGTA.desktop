@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=YAGTA
+Icon=io.github.epiccakeking.YAGTA
+Exec=python3 -m yagta
+StartupWMClass=io.github.epiccakeking.YAGTA
+Keywords=To-Do;Todo;Tasks
