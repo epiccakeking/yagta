@@ -1,0 +1,64 @@
+<!--
+Copyright 2022 epiccakeking
+
+This file is part of YAGTA.
+
+YAGTA is free software: you can redistribute it and/or modify it under the terms of
+the GNU General Public License as published by the Free Software Foundation,
+either version 3 of the License, or (at your option) any later version.
+
+YAGTA is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with YAGTA.
+If not, see <https://www.gnu.org/licenses/>.
+-->
+<interface>
+  <template class="EditWindow" parent="GtkWindow">
+    <child type="titlebar">
+      <object class="GtkHeaderBar">
+        <property name="title-widget">
+          <object class="GtkOverlay">
+            <property name="hexpand">True</property>
+            <child>
+              <object class="GtkEntry" id="title">
+                <property name="xalign">.5</property>
+              </object>
+            </child>
+            <child type="overlay">
+              <object class="GtkButton" id="title_focus_button">
+                <style>
+                  <class name="title_focus_button"/>
+                </style>
+              </object>
+            </child>
+          </object>
+        </property>
+        <child type="start">
+          <object class="GtkButton">
+            <style>
+              <class name="done_button"/>
+            </style>
+            <property name="label">Done</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkBox">
+        <property name="orientation">GTK_ORIENTATION_VERTICAL</property>
+        <child>
+          <object class="GtkScrolledWindow">
+            <child>
+              <object class="GtkTextView" id="body">
+                <property name="vexpand">True</property>
+                <property name="wrap_mode">GTK_WRAP_WORD_CHAR</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>
